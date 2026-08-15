@@ -96,9 +96,11 @@ Then run:
 
 ```sh
 docker compose -f pwd.yml up -d
+docker compose -f pwd.yml exec backend bench --site frontend install-app healthcare
+docker compose -f pwd.yml exec backend bench --site frontend list-apps
 ```
 
-Wait for a couple of minutes for ERPNext site to be created or check `create-site` container logs before opening browser on port `8080`. (username: `Administrator`, password: `admin`)
+Wait for a couple of minutes for ERPNext site to be created or check `create-site` container logs before opening browser `http://localhost:8083/`. (username: `Administrator`, password: `admin`)
 
 ## Contributing
 
